@@ -1,4 +1,5 @@
 #include "CoEditor.h"
+#include "../globals.h"
 
 /**
  * Initializes a CoEditor instance.

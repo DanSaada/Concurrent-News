@@ -5,7 +5,7 @@
 #include <string.h>
 #include <unistd.h> 
 
-#include "../UnboundedBuffer/UnBoundedBuffer.h"
+#include "../UnBoundedBuffer/UnBoundedBuffer.h"
 #include "../BoundedBuffer/BoundedBuffer.h"
 #include "../Dispatcher/Dispatcher.h"
 

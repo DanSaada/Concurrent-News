@@ -6,23 +6,19 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-#include "../UnboundedBuffer/UnBoundedBuffer.h"
-#include "../BoundedBuffer/BoundedBuffer.h"
-#include "../Producer/Producer.h"
-#include "../Dispatcher/Dispatcher.h"
-#include "../CoEditor/CoEditor.h"
-#include "../ScreenManager/ScreenManager.h"
+#include "./UnBoundedBuffer/UnBoundedBuffer.h"
+#include "./BoundedBuffer/BoundedBuffer.h"
+#include "./Producer/Producer.h"
+#include "./Dispatcher/Dispatcher.h"
+#include "./CoEditor/CoEditor.h"
+#include "./ScreenManager/ScreenManager.h"
+#include "./globals.h"
 
-#define MAX_MESSAGE_LENGTH 100
-#define NUM_MESSAGE_TYPES 3
-#define NUM_CO_EDITORS 3
-
-//----------------GLOBALS------------------
-int numProducers;
-int coEditorBufferSize;
-Producer** producers;
-BoundedBuffer* sharedBuffer;
-char** messages;
+void freeProducers();
+void freeDispatcher(Dispatcher* dispatcher);
+void freeSharedBuffer(BoundedBuffer* buffer);
+void cleanUp(Dispatcher* dispatcher, BoundedBuffer* sharedBuffer);
+void programLogic();
 
 
 void freeProducers() {

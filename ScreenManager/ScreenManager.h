@@ -3,8 +3,8 @@
 
 #include <stdio.h>
 
-#include "../BoundedQueue/BoundedQueue.h"
+#include "../BoundedBuffer/BoundedBuffer.h"
 
-void screenManager()
+void screenManager();
 
 #endif
