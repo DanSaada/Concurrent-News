@@ -7,6 +7,7 @@
 
 #include "../UnboundedBuffer/UnBoundedBuffer.h"
 #include "../BoundedBuffer/BoundedBuffer.h"
+#include "../Dispatcher/Dispatcher.h"
 
 typedef struct {
     char message[22];
