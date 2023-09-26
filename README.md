@@ -16,6 +16,8 @@ The Producer queues and the shared queue among the Co-Editors are both designed 
 
 To ensure thread safety and efficient operation, these bounded buffers are implemented using synchronization mechanisms like mutexes and counting semaphores.
 
+<img width="400" height="400" alt="Design of the system" src="https://github.com/DanSaada/Concurrent-News/assets/112869076/9b6c39df-a19f-4e9e-b6f1-249ea6ba69d4">
+
 The Dispatcher plays a crucial role in the system as it scans the Producer's queues utilizing a [round-robin](https://en.wikipedia.org/wiki/Round-robin_scheduling) algorithm. Additionally, it is responsible for sorting the articles based on their respective types.
 
 The system reads a configuration file to ascertain several crucial parameters, including the number of Producers, the quantity of strings each Producer should generate, and the size of the queues. The configuration file follows this format:
